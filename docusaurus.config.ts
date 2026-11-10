@@ -7,26 +7,25 @@ dotenvconfig();
 
 /* TODO: change to read configuration from environment */
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
-const gitRepositoryUrl = process.env.GIT_REPOSITORY_URL ?? 'https://github.com/jeromewinkler-Omega/DSO-Q'
-
+const gitRepositoryUrl = process.env.GIT_REPOSITORY_URL ?? 'https://github.com/jeromewinkler-Omega/omega-dso'; // Stringe Constante für die GitHub-Repository-URL, die aus der Umgebungsvariable gelesen wird oder einen Standardwert hat
 
 const config: Config = {
-  title: 'DSO-Q Live Blog',
-  tagline: 'Documenting my journey, challenges, and milestones into the world of DevSecOps.',
+  title: 'DSO Live Blog to verify my live Project diary ', // User-Anpassung des Titels der Website
+  tagline: 'Combining a relentless drive for efficiency with meticulous attention to detail, I am fully focused on transitioning into the DevSecOps landscape and mastering the challenges ahead.', // User-Anpassung des Untertitels der Website
   favicon: 'img/Omega-favicon.ico',
 
   // Set the production url of your site here
-  url: process.env.DEPLOYMENT_URL ?? gitRepositoryUrl ?? 'https://jeromewinkler-Omega.github.io',
+  url: process.env.DEPLOYMENT_URL ?? 'https://jeromewinkler-Omega.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL ?? "/DSO-Q/",
+  baseUrl: process.env.BASE_URL ?? "/dso-blog-z/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: process.env.GITHUB_ORG ?? 'jeromewinkler-Omega', // Usually your GitHub org/user name.
-  projectName: process.env.GITHUB_PROJECT ?? 'DSO-Q', // Usually your repo name.
+  organizationName: process.env.GITHUB_ORG ?? 'jeromewinkler-Omega',// Usually your GitHub org/user name.
+  projectName: process.env.GITHUB_PROJECT, // Usually your repo name.
 
-  deploymentBranch: process.env.DEPLOYMENT_BRANCH ?? 'gh-pages', // The branch the site is deployed to.
+  deploymentBranch: process.env.DEPLOYMENT_BRANCH ?? 'gh-pages', // The branch where the site will be deployed
 
   onBrokenLinks: 'throw',
   markdown: {
@@ -52,7 +51,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-             gitRepositoryUrl,
+            gitRepositoryUrl,
         },
         blog: blogEnabled ? 
           {
@@ -64,7 +63,7 @@ const config: Config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
             editUrl:
-              gitRepositoryUrl,
+              `${gitRepositoryUrl}/tree/main/`,
             // Useful options to enforce blogging best practices
             onInlineTags: 'warn',
             onInlineAuthors: 'warn',
@@ -82,7 +81,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'DSO-Q Live Blog',
+      title: 'DSO-Q',
       logo: {
         alt: 'My Site Logo',
         src: 'img/omega-logo.svg',
@@ -95,7 +94,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: gitRepositoryUrl,
+          href: 'https://github.com/jeromewinkler-Omega/dso-blog-z',
           label: 'Github',
           position: 'right',
         },
@@ -111,23 +110,22 @@ const config: Config = {
               label: 'Tutorial',
               to: '/docs/guides/intro',
             },
-          ],
-        },
-        {
-          title: 'projects',
-          items: [
             {
-              label: 'overview',
+              label: 'projects',
               to: '/docs/projects/overview',
             },
           ],
+        },
+        {
+          title: '', // leere Überschrift für die zweite Spalte in der Fußzeile
+          
         },
         {
           title: 'More',
           items: [
             {
               label: 'GitHub',
-              href: gitRepositoryUrl,
+              href: 'https://github.com/jeromewinkler-Omega/dso-blog-z',
             },
             {
               label: 'Template',
@@ -136,7 +134,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} DSO-Q Built with Docusaurus. 💚.extended from the developer-akademie-starter  `,
+      copyright: `Copyright © ${new Date().getFullYear()} Z-Nano-Core. Built with Docusaurus. 💚.extended from the developer-akademie-starter  `,
     },
     prism: {
       theme: prismThemes.github,
