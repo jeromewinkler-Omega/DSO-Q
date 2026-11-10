@@ -10,8 +10,8 @@ const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 const gitRepositoryUrl = process.env.GIT_REPOSITORY_URL ?? 'https://github.com/jeromewinkler-Omega/omega-dso'; // Stringe Constante für die GitHub-Repository-URL, die aus der Umgebungsvariable gelesen wird oder einen Standardwert hat
 
 const config: Config = {
-  title: 'DSO Live Blog to verify my live Project diary ', // User-Anpassung des Titels der Website
-  tagline: 'Combining a relentless drive for efficiency with meticulous attention to detail, I am fully focused on transitioning into the DevSecOps landscape and mastering the challenges ahead.', // User-Anpassung des Untertitels der Website
+  title: 'DSO-Q Live Blog to verify my live Project diary ', // User-Anpassung des Titels der Website
+  tagline: 'Learning DevSecOps, one commit at a time', // User-Anpassung des Untertitels der Website
   favicon: 'img/Omega-favicon.ico',
 
   // Set the production url of your site here
